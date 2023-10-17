@@ -1,0 +1,257 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #F1FDFA;
+    font-family: "Gill Sans", "Cursive", "Lucida Console", sans-serif;
+    line-height: 1.5;
+}
+
+/* styles the name and the navigation bar */
+header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 25px;
+    background-color: #32749D;
+    font-family: "Trebuchet MS", "Cursive", "Lucida Console", sans-serif;
+}
+
+h1 {
+    background-color: #76B2BF;
+    color: white;
+    padding: 10px 10px 10px 35px;
+    display: flex;
+    position:relative;
+    left: -25px;
+}
+
+.top-nav{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: 20px 5px;
+}
+
+.top-nav li {
+    padding: 10px;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+a:hover {
+    color: black;
+}
+
+/* styles the banner */
+.banner {
+    background-image: url(../images/stars-banner.gif);
+    height: 350px;
+    width: 100%;
+    margin-bottom: 25px;
+    background-size: cover;
+    background-position: center;
+}
+
+#sub-header {
+    display: flex;
+    color: #F1FDFA;
+    background-color: #76B2BF;
+    position: absolute;
+    bottom: 370px;
+    right: 15px;
+    padding: 8px 30px 8px 30px;
+}
+
+/* style the About Me section */
+main {
+    line-height: 20px;
+}
+
+.about{
+    display: flex;
+}
+
+#about-me {
+    display: flex;
+    position: relative;
+    padding-left: 15px;
+    white-space: nowrap;
+}
+
+#profile {
+    position: relative;
+    display: flex;
+    width: 125px;
+    height: 160px;
+    margin: 40px 0px 25px -120px;
+}
+
+#para {
+    display: flex;
+    position: relative;
+    padding: 2em 3em 0 5em;
+    text-align: center;
+}
+
+/* grid section - to showcase the work/projects.*/
+#project-grid{
+    display: grid;
+    height: 500px;
+    gap: 10px;
+    margin: 20px 10px 30px 15px;
+    grid-template-columns: 1fr 2fr 2fr;
+    grid-template-areas: 
+        "pro horiseon horiseon"
+        "pro horiseon horiseon"
+        "pro pro-2 pro-3"
+        "pro pro-4 pro-5"
+    ;
+}
+
+#projects {
+    grid-area: pro;
+    display: flex;
+    position: relative;
+}
+
+/* background (using coloured background acting as the placeholder for some of the projects */
+.pro-link {
+    position: absolute;
+    bottom: 7px;
+    background-color:#32749D;
+    color: white;
+    padding: 7px 10px;
+    opacity: 0.9;
+    border-radius: 10px;
+}
+
+#project-1 {
+    grid-area: horiseon;
+    display: flex;
+    position: relative;
+    background-image: url(../images/horiseon.png);
+    opacity: 0.8;
+}
+
+#project-1:hover {
+    box-shadow: 0 0 3px 4px rgba(0, 66, 88, 0.5);
+    transition: 1s;
+    opacity: 1;
+}
+
+#project-2 {
+    grid-area: pro-2;
+    background-color: #76B2BF;
+    display: flex;
+    position: relative;
+    opacity: 0.8;
+}
+
+#project-2:hover {
+    box-shadow: 0 0 3px 4px rgba(0, 6, 88, 0.5);
+    background-color: #569fb0;
+    transition: 1s;
+    opacity: 1;
+}
+
+#project-3 {
+    grid-area: pro-3;
+    background-color: #76B2BF;
+    display: flex;
+    position: relative;
+    opacity: 0.8;
+}
+
+#project-3:hover {
+    box-shadow: 0 0 3px 4px rgba(0, 6, 88, 0.5);
+    background-color: #569fb0;
+    transition: 1s;
+    opacity: 1;
+}
+
+#project-4 {
+    grid-area: pro-4;
+    background-color: #76B2BF;
+    display: flex;
+    position: relative;
+    opacity: 0.8;
+}
+
+#project-4:hover {
+    box-shadow: 0 0 3px 4px rgba(0, 6, 88, 0.5);
+    background-color: #569fb0;
+    transition: 1s;
+    opacity: 1;
+}
+
+#project-5 {
+    grid-area: pro-5;
+    background-color: #76B2BF;
+    display: flex;
+    position: relative;
+    opacity: 0.8;
+}
+
+#project-5:hover {
+    box-shadow: 0 0 3px 4px rgba(0, 6, 88, 0.5);
+    background-color: #569fb0;
+    transition: 1s;
+    opacity: 1;
+}
+
+.project-round {
+    border-radius: 15px;
+  }
+
+  /* styles the footer section */
+footer {
+    padding: 30px;
+    background-color: #32749D;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.contact-me {
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+/* media query*/
+ @media only screen and (max-width: 768px){
+    header {
+        background-color: rgb(62, 59, 63);
+    }
+
+    .about {
+        flex-direction: column;
+    }
+
+    #profile {
+        position: relative;
+        display: block;
+        margin: 10px auto -10px auto;
+    }
+
+    #project-grid {
+        flex-direction: column;
+    }   
+
+    footer{
+        background-color: rgb(62, 59, 63);
+        justify-content: space-evenly;
+    }
+    .contact-me {
+        color: white;
+        width: 20%;
+        flex-direction: column;
+    }
+ }
